@@ -46,6 +46,8 @@ mongoose.connect(mongoURI, mongooseOptions)
     phoneNo:{
         type: String,
         required: true,//phoneNo is required
+        match: /^\(\+\d{3}\)\s*-\s*\d{3}\s*\d{3}\s*\d{4}$/,
+
     },
     email: {
       type: String,
