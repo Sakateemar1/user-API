@@ -43,11 +43,10 @@ mongoose.connect(mongoURI, mongooseOptions)
       type: Number,
     },
 
-    phoneNo:{
-        type: String,
-        required: true,//phoneNo is required
-        match: /^\(\+\d{3}\)\s*-\s*\d{3}\s*\d{3}\s*\d{4}$/,
-
+    phoneNo: {
+      type: String,
+      required: true,
+      match: /^\+\d{3}-\d{3}\s*\d{3}\s*\d{4}$/,
     },
     email: {
       type: String,
